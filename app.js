@@ -248,3 +248,7 @@ app.get("*", (req,res)=>{
  req.flash("notFound", "Page Not Found !")
   res.render("all.ejs");
 })
+
+app.get("/", (req,res)=>{
+  res.redirect("/main");
+})
