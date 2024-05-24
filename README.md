@@ -8,7 +8,7 @@ This website is deployed on a free service called (Render.com). So It might take
 `node app.js`
 (Assuming Node.Js is already installed in your PC).
 * Output Will be shown like this after running the Command-
-| <img src="/images/ss.png">             | 
+| <img src="/public/images/ss.png">             | 
 | :----------------------------------: | 
 
 
