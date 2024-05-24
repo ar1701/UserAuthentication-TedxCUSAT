@@ -24,4 +24,4 @@ This website is deployed on a free service called (Render.com). So It might take
 ## Tech Stack Used
 * Frontend - HTML, CSS , JavaScript and BootStrap
 * BACKEND - Node.js, Express.js
-* DATABASE - Mongo ATLAS
+* DATABASE - MongoDB ATLAS
