@@ -7,6 +7,8 @@ This website is deployed on a free service called (Render.com). So It might take
 ### You can either use deployed link to see the working of site or You can FORK this repo and run the follwing command to open the site-
 `node app.js`
 (Assuming Node.Js is already installed in your PC).
+* Output Will be shown like this after running the Command-
+(/images/ss.png)
 
 ## About:-
 * This is Full Stack and Responsive Website for USER AUTHENTICATION.
