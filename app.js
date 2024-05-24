@@ -64,7 +64,7 @@ app.use((req, res, next) => {
   next();
 });
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
 const dbUrl = process.env.ATLASDB_URL;
 
 async function main() {
