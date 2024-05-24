@@ -8,10 +8,10 @@ This website is deployed on a free service called (Render.com). So It might take
 `node app.js`
 (Assuming Node.Js is already installed in your PC).
 * Output Will be shown like this after running the Command-
-* 
+  
  <img src="/public/images/ss.png">             
 
-
+* Then You can click on the link to open the site.
 
 ## About:-
 * This is Full Stack and Responsive Website for USER AUTHENTICATION.
