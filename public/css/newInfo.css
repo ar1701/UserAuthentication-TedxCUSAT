@@ -167,7 +167,12 @@ h1 {
         margin-left: 0 !important;
     }
 
-    .alert {
-        width: 90%;
+    .alert{
+        font-size: smaller;
+        height: 40px;
+        padding-top: 10px;
+        width: 60%;
+        margin-top: 60px;
+        
     }
 }

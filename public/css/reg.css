@@ -145,9 +145,9 @@ h1 {
         margin: 10px 0;
     }
 
-    /* .customBtn1 {
+    .customBtn1 {
         width: 100px;
-    } */
+    }
 
     h1 {
         font-size: 30px;
@@ -166,10 +166,28 @@ h1 {
     }
 
     .customBtn {
-        width: 80%;
+        width: 60%;
+        margin-left: 40px;
+        font-size: 15px;
+        height: 38px;
+    }
+    .customBtn1 {
+        width: 60%;
+        margin-left: 40px;
+        height: 38px;
+        font-size: 15px;
     }
 
     h1 {
         font-size: 25px;
+    }
+
+    .alert{
+        font-size: smaller;
+        height: 40px;
+        padding-top: 10px;
+        width: 85%;
+        margin-top: 60px;
+        
     }
 }

@@ -110,7 +110,6 @@ h1 {
     font-size: 40px;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     nav.navbar {
         height: auto;
@@ -134,12 +133,12 @@ h1 {
     .mainBody {
         width: 90%;
         height: auto;
-        margin-top: 15%;
+        margin-top: 50%;
         padding: 10px;
     }
 
     .customBtn {
-        margin: 10px 0;
+        margin: 20px;
     }
 
     h1 {
@@ -149,7 +148,7 @@ h1 {
 
 @media (max-width: 480px) {
     .mainBody {
-        margin-top: 20%;
+        margin-top: 50%;
     }
 
     .customBtn {
@@ -158,5 +157,14 @@ h1 {
 
     h1 {
         font-size: 25px;
+    }
+
+    .alert{
+        font-size: smaller;
+        height: 40px;
+        padding-top: 10px;
+        width: 85%;
+        margin-top: 60px;
+        
     }
 }

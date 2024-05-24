@@ -92,6 +92,26 @@ a {
 }
 
 @media (max-width: 768px) {
+    nav.navbar {
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar .nav-icon {
+        width: 150px;
+        height: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+
     .card {
         margin-top: 10px;
         padding: 15px;
@@ -111,6 +131,36 @@ a {
 
     h5 {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainBody {
+        margin-top: 20%;
+    }
+
+    .customBtn {
+        width: 80%;
+        margin-left: 40px;
+    }
+    .customBtn1 {
+        width: 80%;
+        margin-left: 40px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .alert{
+        font-size: smaller;
+        height: 40px;
+        padding-top: 10px;
+        width: 60%;
+        margin-top: 60px;
+        
     }
 }
 

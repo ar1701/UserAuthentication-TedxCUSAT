@@ -189,11 +189,23 @@ h5 {
         margin-top: 20%;
     }
 
+    .customBtn{
+        margin-bottom: 10px;
+    }
+
     h1 {
         font-size: 25px;
     }
 
     h2 {
         font-size: 30px;
+    }
+    .alert{
+        font-size: smaller;
+        height: 40px;
+        padding-top: 10px;
+        width: 85%;
+        margin-top: 60px;
+        
     }
 }

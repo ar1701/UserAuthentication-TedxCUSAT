@@ -19,6 +19,13 @@
 </head>
 <body>
 
+    <% if(already && already.length) { %>
+        <div class="alert alert-info alert-dismissible fade show col-5"
+            role="alert">
+            <%= already %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <% } %>
     <% if(update && update.length) { %>
         <div class="alert alert-success alert-dismissible fade show col-5"
             role="alert">

@@ -60,6 +60,7 @@ app.use((req, res, next) => {
   res.locals.first = req.flash("first");
   res.locals.register = req.flash("register");
   res.locals.notFound = req.flash("notFound");
+  res.locals.already = req.flash("already");
   next();
 });
 
@@ -115,14 +116,10 @@ app.post("/new", async (req, res, next) => {
 
     res.render("newInfo.ejs");
   } catch (error) {
-    req.flash(
-      "err",
-      "Username or Email-id is already registered ! "
-    );
+    req.flash("err", "Username or Email-id is already registered ! ");
     res.redirect("/new");
   }
 });
-
 
 app.post("/info", async (req, res) => {
   try {
@@ -150,8 +147,13 @@ app.post("/info", async (req, res) => {
 });
 
 app.get("/reg", (req, res) => {
-  req.flash("warning", "You Have to Logged in First");
-  res.render("reg.ejs");
+  if (req.isAuthenticated()) {
+    req.flash("already", "You are Already Logged In !");
+    res.redirect("/show");
+  } else {
+    req.flash("warning", "You Have to Logged in First");
+    res.render("reg.ejs");
+  }
 });
 
 app.post(
@@ -161,23 +163,21 @@ app.post(
     failureFlash: true,
   }),
   async (req, res) => {
-    try{
+    try {
       let { username } = req.body;
-    let user = await User.findOne({ username: username });
-    let id = user._id;
-    req.session.regId = id;
-    let info = await Profile.findOne({ owner: id });
-    let formattedDate = moment(info.dob).format("MMM DD YYYY");
-    res.render("show.ejs", { info, user, formattedDate });
-    }catch(err){
-    let { username } = req.body;
-    let user = await User.findOne({ username: username });
-    await User.findByIdAndDelete({ _id: user._id });
-    req.flash("register", "Please, Re-register Your Self ! ")
-    res.redirect("/new");
-
+      let user = await User.findOne({ username: username });
+      let id = user._id;
+      req.session.regId = id;
+      let info = await Profile.findOne({ owner: id });
+      let formattedDate = moment(info.dob).format("MMM DD YYYY");
+      res.render("show.ejs", { info, user, formattedDate });
+    } catch (err) {
+      let { username } = req.body;
+      let user = await User.findOne({ username: username });
+      await User.findByIdAndDelete({ _id: user._id });
+      req.flash("register", "Please, Re-register Your Self ! ");
+      res.redirect("/new");
     }
-    
   }
 );
 
@@ -244,22 +244,22 @@ app.get("/logout", (req, res, next) => {
   });
 });
 
-app.get("/about", (req,res)=>{
+app.get("/about", (req, res) => {
   res.render("about.ejs");
-})
+});
 
-app.get("/contact", (req,res)=>{
+app.get("/contact", (req, res) => {
   res.render("contact.ejs");
-})
-app.get("/help", (req,res)=>{
+});
+app.get("/help", (req, res) => {
   res.render("help.ejs");
-})
+});
 
-app.get("*", (req,res)=>{
- req.flash("notFound", "Page Not Found !")
+app.get("*", (req, res) => {
+  req.flash("notFound", "Page Not Found !");
   res.render("all.ejs");
-})
+});
 
-app.get("/", (req,res)=>{
+app.get("/", (req, res) => {
   res.redirect("/main");
-})
+});
