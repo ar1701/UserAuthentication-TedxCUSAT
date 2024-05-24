@@ -61,7 +61,6 @@ nav.navbar {
     color: rgb(218, 198, 198);
 }
 
-
 .navbar .nav-links a:hover {
     color: #ffcc00;
 }
@@ -86,7 +85,6 @@ nav.navbar {
     box-shadow: 2px 2px 20px rgb(101, 42, 165);
 }
 
-
 .customBtn {
     width: 85px;
     font-size: 18px;
@@ -102,16 +100,76 @@ nav.navbar {
     cursor: pointer;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-h1{
+h1 {
     position: relative;
     margin-top: 110px;
     font-size: 40px;
 }
 
-.customForm{
+.customForm {
     margin-left: 74px !important;
+}
+
+@media (max-width: 768px) {
+    nav.navbar {
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar .nav-icon {
+        width: 150px;
+        height: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .mainBody {
+        width: 90%;
+        height: auto;
+        margin-top: 15%;
+        padding: 10px;
+    }
+
+    .customBtn {
+        margin: 10px 0;
+    }
+
+    /* .customBtn1 {
+        width: 100px;
+    } */
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .customForm {
+        margin-left: 0 !important;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainBody {
+        margin-top: 20%;
+    }
+
+    .customBtn {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
 }

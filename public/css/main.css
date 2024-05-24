@@ -109,3 +109,54 @@ a {
 h1 {
     font-size: 40px;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav.navbar {
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar .nav-icon {
+        width: 150px;
+        height: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .mainBody {
+        width: 90%;
+        height: auto;
+        margin-top: 15%;
+        padding: 10px;
+    }
+
+    .customBtn {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainBody {
+        margin-top: 20%;
+    }
+
+    .customBtn {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}

@@ -244,6 +244,17 @@ app.get("/logout", (req, res, next) => {
   });
 });
 
+app.get("/about", (req,res)=>{
+  res.render("about.ejs");
+})
+
+app.get("/contact", (req,res)=>{
+  res.render("contact.ejs");
+})
+app.get("/help", (req,res)=>{
+  res.render("help.ejs");
+})
+
 app.get("*", (req,res)=>{
  req.flash("notFound", "Page Not Found !")
   res.render("all.ejs");

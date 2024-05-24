@@ -44,14 +44,13 @@ nav.navbar {
     margin: 0;
     padding: 0;
     margin-left: 5px;
-
 }
 
 .navbar .nav-links li {
     margin: 0 15px;
 }
 
-.navbar  a {
+.navbar a {
     color: rgb(10, 168, 147);
     text-decoration: none;
     font-weight: 500;
@@ -100,11 +99,9 @@ h2 {
     margin-bottom: 20px;
     color: rgb(117, 7, 62);
     font-weight: 650;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position: relative;
     left: 38%;
-
-
 }
 
 h4 {
@@ -113,13 +110,15 @@ h4 {
     color: #ff2b06;
     display: inline;
 }
-h5{
+
+h5 {
     display: inline;
 }
 
 .card {
     margin-bottom: 20px;
 }
+
 .customBtn {
     width: 150px;
     font-size: 16px;
@@ -135,4 +134,66 @@ h5{
 .customBtn:hover {
     box-shadow: 2px 2px 5px rgb(222, 170, 17);
     cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    nav.navbar {
+        height: auto;
+        padding: 10px;
+    }
+
+    .navbar .nav-icon {
+        width: 150px;
+        height: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .mainBody {
+        width: 100%;
+        margin-top: 15%;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .customBtn {
+        width: 40%;
+        margin-left: 110px ;
+        left: 0;
+        bottom: 0;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 35px;
+        left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainBody {
+        margin-top: 20%;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
 }
