@@ -154,16 +154,20 @@ h1 {
     .customBtn {
         width: 80%;
     }
+    .customBtn1 {
+        width: 85%;
+    }
 
     h1 {
         font-size: 25px;
+        margin-top: 15px;
     }
 
     .alert{
-        font-size: smaller;
+        font-size: x-small;
         height: 40px;
         padding-top: 10px;
-        width: 85%;
+        width: 90%;
         margin-top: 60px;
         
     }
